@@ -1,0 +1,135 @@
+/* Reset and Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Container for the Post View */
+.view-post-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Centers all text content */
+}
+
+/* Header */
+.view-post-container h2 {
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+/* Post Details Layout */
+.post-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers all child elements */
+  gap: 20px; /* Adds space between sections */
+}
+
+/* Images Section */
+.post-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centers images */
+  gap: 15px;
+}
+
+.post-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #f0f0f0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Info Section */
+.post-info {
+  text-align: center; /* Ensures alignment for texts in info section */
+  line-height: 1.6;
+}
+
+.post-info h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.post-info p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.post-info strong {
+  color: #007bff;
+}
+
+/* Delete Button Styles */
+.post-actions button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #dc3545; /* Red for the delete button */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover Effect */
+.post-actions button:hover {
+  background-color: #a71d2a; /* Darker red on hover */
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* Button Focus State */
+.post-actions button:focus {
+  outline: none;
+  box-shadow: 0 0 4px rgba(220, 53, 69, 0.8); /* Red shadow to indicate focus */
+}
+
+/* Disable State */
+.post-actions button:disabled {
+  background-color: #f5c6cb; /* Lighter red for disabled state */
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .post-actions button {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .view-post-container {
+    padding: 15px;
+  }
+
+  .post-image {
+    width: 150px;
+    height: 150px;
+  }
+}
